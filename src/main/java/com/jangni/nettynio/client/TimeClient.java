@@ -1,4 +1,4 @@
-package com.jangni.netty1.client;
+package com.jangni.nettynio.client;
 
 /**
  * @Description:

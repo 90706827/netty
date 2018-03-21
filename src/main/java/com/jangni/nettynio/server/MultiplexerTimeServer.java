@@ -1,4 +1,4 @@
-package com.jangni.netty1.server;
+package com.jangni.nettynio.server;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -7,7 +7,6 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.rmi.server.ExportException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
