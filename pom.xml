@@ -35,6 +35,12 @@
             <artifactId>javassist</artifactId>
             <version>3.18.1-GA</version>
         </dependency>
+        <!-- 采用google RateLimiter 限流 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
 
 
     </dependencies>
