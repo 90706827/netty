@@ -41,7 +41,10 @@
             <artifactId>guava</artifactId>
             <version>19.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+        </dependency>
 
     </dependencies>
 
