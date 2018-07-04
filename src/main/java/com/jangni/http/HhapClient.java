@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 16:41
  * Description:
  */
-public class HhapClient implements IHhapClient {
+public class HhapClient implements INetClient {
 
     private String host;
     private int port;
@@ -78,6 +78,7 @@ public class HhapClient implements IHhapClient {
             StatusLine statusLine = httpResponse.getStatusLine();
             if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
                 String respBody = EntityUtils.toString(httpResponse.getEntity());
+                logger.info("客户端接收报文："+respBody);
                 msgContextDecoder.decode(respBody, msgContext);
             } else {
                 msgContext.setMsgCode("91");
@@ -95,6 +96,14 @@ public class HhapClient implements IHhapClient {
             cpte.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally{
+            if(httpResponse != null){
+                try {
+                    httpResponse.close();
+                } catch (IOException e) {
+                    logger.warn("关闭连接失败");
+                }
+            }
         }
     }
 

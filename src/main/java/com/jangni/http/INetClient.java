@@ -6,7 +6,7 @@ package com.jangni.http;
  * Time: 17:07
  * Description:
  */
-public interface IHhapClient {
+public interface INetClient {
 
     public void send(MsgContext msgContext);
 }
