@@ -21,7 +21,7 @@ public class ChangeLengthServerHandler extends ChannelHandlerAdapter {
      * @param msg
      * @throws Exception
      */
-    @Override
+
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         String body = (String) msg;
         System.out.println("Server info:" + body);
